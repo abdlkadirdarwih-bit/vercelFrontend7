@@ -1,0 +1,174 @@
+
+
+
+
+/* Container Centering */
+.containerlogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #4caf50, #81c784);
+  padding: 20px;
+}
+
+/* Form Box */
+.form-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.form-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-box input:focus {
+  border-color: #4caf50;
+}
+
+/* Button */
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-box button:hover {
+  background: #45a049;
+}
+
+/* Link */
+.form-box .link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-box .link a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.form-box .link a:hover {
+  text-decoration: underline;
+}
+
+/* Message */
+.msg {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 📱 Responsive */
+@media (max-width: 500px) {
+  .form-box {
+    padding: 20px;
+  }
+
+  .form-box input,
+  .form-box button {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page{
+  width: 99vw;
+}
+
+.contacts-table-messages-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.contacts-table-messages {
+  width: 40%;
+  min-width: 300px;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.thead-messages {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.thead-messages-th {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tr-messages td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tr-messages:hover {
+  background-color: #f9f9f9;
+  transition: 0.2s ease-in;
+}
+
+.tr-messages td:first-child {
+  text-align: center;
+  width: 50px;
+  font-weight: bold;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .contacts-table-messages-wrapper {
+    justify-content: center;   /* center on small screens */
+  }
+
+  .contacts-table-messages {
+    width: 100% !important;    /* take full width */
+  }
+}
