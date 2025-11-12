@@ -16,7 +16,7 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
     setMsg("");
     // 'http://localhost:3001/'
     try {
-      const res = await axios.post('http://localhost:5173/api/auth/login', {
+      const res = await axios.post('http://localhost:5000/api/auth/login', {
             // const res = await axios.post(`${backendUrl}/api/auth/login`, {
                   // const res = await axios.post('https://vercel-backend7.vercel.app/api/auth/login', {
 
