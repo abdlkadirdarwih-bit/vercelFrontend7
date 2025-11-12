@@ -24,8 +24,8 @@ export default function ChangePasswordPage() {
     }
 
     try {
-      // const res = await axios.post(`${backendUrl}/api/auth/change-password`,  {
-                    const res = await axios.post('http://localhost:3001/api/auth/change-password', {
+      const res = await axios.post(`${backendUrl}/api/auth/change-password`,  {
+                    // const res = await axios.post('http://localhost:3001/api/auth/change-password', {
 
         email,
        oldPassword,
