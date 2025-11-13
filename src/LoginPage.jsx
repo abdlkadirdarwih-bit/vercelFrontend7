@@ -3,11 +3,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { Eye, EyeOff } from "lucide-react"; // 👈 install this icon library
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
+    const [showPassword, setShowPassword] = useState(false); // 👈 for toggle
+
   const navigate = useNavigate();
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -16,8 +19,8 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
     setMsg("");
     // 'http://localhost:3001/'
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', {
-            // const res = await axios.post(`${backendUrl}/api/auth/login`, {
+      // const res = await axios.post('http://localhost:5000/api/auth/login', {
+            const res = await axios.post(`${backendUrl}/api/auth/login`, {
                   // const res = await axios.post('https://vercel-backend7.vercel.app/api/auth/login', {
 
         email,
@@ -41,13 +44,33 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
           required
         />
 
-        <input
-          type="password"
+        {/* <input
+                    type={showPassword ? "text" : "password"} // 👈 toggle type
+          // type="password"
           placeholder="Enter Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-        />
+        /> */}
+
+<div className="password-container">
+          <input
+            type={showPassword ? "text" : "password"} // 👈 toggle type
+            placeholder="Enter Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+
+          {/* 👇 Icon button */}
+          <span
+            className="password-toggle"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+          </span>
+        </div>
+
 
         <button type="submit">Login</button>
         <p className="link">

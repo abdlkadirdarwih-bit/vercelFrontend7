@@ -2,6 +2,37 @@
 
 
 
+
+
+
+
+
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 40px; /* space for the icon */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 25px;
+  cursor: pointer;
+  color: #555;
+}
+.password-toggle:hover {
+  color: #000000;
+}
+
+
+
+
+
 /* Container Centering */
 .containerlogin {
   display: flex;
@@ -29,7 +60,7 @@
 
 /* Inputs */
 .form-box input {
-  width: 100%;
+  width: 90%;
   padding: 12px;
   margin-bottom: 15px;
   font-size: 16px;
@@ -44,7 +75,7 @@
 
 /* Button */
 .form-box button {
-  width: 100%;
+  width: 95%;
   padding: 12px;
   background: #4caf50;
   color: white;
