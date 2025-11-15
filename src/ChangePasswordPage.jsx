@@ -11,6 +11,7 @@ export default function ChangePasswordPage() {
   const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirm, setConfirm] = useState("");
+  const [msg, setMsg] = useState("");
 
   const [showOld, setShowOld] = useState(false);
   const [showNew, setShowNew] = useState(false);
