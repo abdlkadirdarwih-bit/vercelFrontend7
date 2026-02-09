@@ -35,7 +35,7 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
   return (
     <div className="containerlogin">
       <form className="form-box" onSubmit={handleLogin}>
-        <h2>Login7 </h2>
+        <h2>Login7bb </h2>
         <input
           type="email"
           placeholder="Enter Email"
